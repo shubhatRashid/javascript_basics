@@ -10,8 +10,12 @@ Array.prototype.reduceCopy = function(callback,initialValue){
 }
 
 var nums = [1,2,3,4]
-var result = nums.reduceCopy((total,n,i)=>{
-    total = total*n
-    return total
-},2)
-console.log(result)
+// var result = nums.reduceCopy((total,n,i)=>{
+//     total = total*n
+//     return total
+// },2)
+// console.log(result)
+
+nums.forEach((n,i) => n*i)
+console.log(nums)
+

@@ -65,7 +65,7 @@
         }
         console.log('end')
     }
-    A()
+    // A()
     // What is the output of this code ?
 
     // SOLUTION ;
@@ -95,4 +95,34 @@
     //     console.log('end')
     // }
 
+}
+
+// QUESTION 04 :
+
+{   
+    // MAKE A PRIVATE COUNTER USING CLOSURES
+    function counter()  {
+        var _counter = 0
+        function add(increment){
+            return _counter += increment
+        }
+
+        function retrieve(){
+            console.log(_counter)
+        }
+        return {
+            add,
+            retrieve
+        }
+    }
+
+    // const c = counter()
+    // c.add(5)
+    // c.add(15)
+    // c.retrieve()
+}
+
+// QUESTION 05 :
+{
+    
 }

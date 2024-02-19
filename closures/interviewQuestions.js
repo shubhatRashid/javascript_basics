@@ -98,7 +98,6 @@
 }
 
 // QUESTION 04 :
-
 {   
     // MAKE A PRIVATE COUNTER USING CLOSURES
     function counter()  {
@@ -124,5 +123,51 @@
 
 // QUESTION 05 :
 {
+    // MEMOISE/CACHING FUNCTION IN JS
+    function square(n) {
+        for (let i =0;i<100000000;i++){
+            // takes some time
+        }
+        return n*n
+    }
+    // console.time("first time")
+    // console.log(square(99))
+    // console.timeEnd("first time")
+
+    // console.time("first time")
+    // console.log(square(99))
+    // console.timeEnd("first time")
     
+    // The above two calls take same time
+    // create function which reduces the time of processing if a function is 
+    // called with same arguments again 
+
+    // SOLUTION :
+    function Memoise(fun,context){
+        let res = {}
+        return function (...args){
+            var argCache = JSON.stringify(args)
+            if (!res[argCache]){
+                res[argCache] = fun.call(context || this, ...args)
+            }
+            return res[argCache]
+        }
+    }
+
+    // const memoiseSquare = Memoise(square)
+    // console.time("first time")
+    // console.log(memoiseSquare(99))
+    // console.timeEnd("first time")
+
+    // console.time("first time")
+    // console.log(memoiseSquare(99))
+    // console.timeEnd("first time")
+
+    // Now the second call takes very less time 
+}
+
+// QUESTION 05 :
+{
+    // Once function polyfill or create a function which binds a
+    // function to run only once
 }

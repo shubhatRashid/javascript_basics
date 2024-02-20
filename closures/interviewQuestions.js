@@ -168,6 +168,5 @@
 
 // QUESTION 05 :
 {
-    // Once function polyfill or create a function which binds a
-    // function to run only once
+    
 }

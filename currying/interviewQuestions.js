@@ -18,9 +18,24 @@
             }
         }
     }
-    operate('multiply')(2)(3)
-    operate('add')(2)(3)
-    operate('minus')(2)(3)
-    operate('divide')(2)(3)
+    // operate('multiply')(2)(3)
+    // operate('add')(2)(3)
+    // operate('minus')(2)(3)
+    // operate('divide')(2)(3)
 
+}
+
+//QUESTIONS : 02
+{
+    // Infinite currying
+    // implement curring with one return function but multiple arguments
+    // like add(1)(2)(3)(4)...
+
+    const add = (a) => {
+        return function(b) {
+            if (b) return add(a+b)
+            return a
+        }
+    }
+    console.log(add(1)(2)(3)(4)(5)(6)())
 }

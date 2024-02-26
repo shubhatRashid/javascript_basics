@@ -166,7 +166,7 @@
     // Now the second call takes very less time 
 }
 
-// QUESTION 05 :
+// QUESTION 06 :
 {
     
 }

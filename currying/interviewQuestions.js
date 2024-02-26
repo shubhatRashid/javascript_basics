@@ -37,5 +37,27 @@
             return a
         }
     }
-    console.log(add(1)(2)(3)(4)(5)(6)())
+    // console.log(add(1)(2)(3)(4)(5)(6)())
+}
+
+// QUESTION 07:
+{
+    // create a function which converts a normal 
+    // function into a currying function
+
+    function curry(fun){
+        return function currying (...args){
+            console.log(args.length,fun.length)
+            if(args.length >= fun.length){
+                return fun(...args)
+            }else{
+                return function (...next){
+                    return currying(...args,...next)
+                }
+            }
+        }
+    }
+    const sum = (a,b,c,d) => a+b+c+d
+    const newSum = curry(sum)
+    console.log(newSum(1)(2)(3)(4))
 }

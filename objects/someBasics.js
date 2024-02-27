@@ -11,8 +11,13 @@ const user = {
     [propertyLast]:ln
 }
 
-console.log(user)
+// console.log(user)
 
 // deleting a property syntax
-delete user.firstName
-console.log(user)
+// delete user.firstName
+// console.log(user)
+
+// looping through an object
+for (key in user){
+    console.log(key,user[key])
+}

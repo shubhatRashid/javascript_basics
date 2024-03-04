@@ -19,4 +19,5 @@ for (var i =0;i<5;i++){
     })
 }
 // output = 5,5,5,5,5
-// Even in 0 time settimeout runs independent of for loop as it behaves asynchronous
+// Even in 0 time settimeout runs independent of 
+// for loop as it behaves asynchronous

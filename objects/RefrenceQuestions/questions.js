@@ -13,8 +13,8 @@
     let person = {name:'lydia'}
     const members = [person]
     person = null;
-    console.log(members) // ? returns original person array
-    console.log(person) // ? returns null
+    // console.log(members) // ? returns original person array
+    // console.log(person) // ? returns null
 
     // here members holds the refrence to the 
     // original object and hence it is logged
@@ -26,3 +26,23 @@
         // console.log(person) //  apple
         // console.log(members) // apple
 } 
+
+// QUESTION : 03
+{
+    let value = {number:10}
+    const multiply = (x={...value}) => {
+        return x.number *= 2
+    }
+    // console.log(multiply()) // returns 20
+    // console.log(multiply()) // returns 20
+    // console.log(multiply(value)) // returns 20
+    // console.log(multiply(value)) // returns 40
+    
+    // when nothing is provided to multiply it 
+    // uses value makes a copy of it using spread
+    // operator and changes that copy that is why 
+    // ist two multiply return 20
+    // When value is exclusively provided inside 
+    // multiply it refers to original object and changes that
+    // that is why it changes to 40 second time around
+}

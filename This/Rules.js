@@ -9,7 +9,8 @@
     //hello() // return undefined here but in browser will return 5
 
     const arrowhello = () => console.log(this.a)
-    //arrowhello() returns 5 as in arrow function this refers to its parent functions object or window
+    //arrowhello() returns 5 as in arrow function this refers to its parent functions object or window example below
+
     const parent = {
         a:10,
         newhello :function (){
@@ -32,4 +33,20 @@ const person = {
     fullName : function () {return this.firstName +" "+ this.lastName}
 }
 //console.log(person.fullName()) returns shubhat rashid
+}
+
+// THIS KEYWORD INSIDE OF A CLASS REFERS TO CONSTRUCTOR ITSELF
+{
+class PersonClass {
+    constructor(name,age){
+        this.name = name,
+        this.age = age
+    } 
+    getName(){
+        console.log(this.name)
+        console.log(this.age)
+    }  
+}
+const person = new PersonClass('shubhat',24)
+person.getName() // return shubhat 24
 }

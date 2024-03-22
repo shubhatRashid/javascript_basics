@@ -45,7 +45,8 @@
 }
 
 // QUESTION 04:
-{   // what will be the output ?
+{   
+    // what will be the output ?
     const person = {
         firstName : 'shubhat',
         logName : function(){
@@ -53,7 +54,7 @@
         }
     }
     //setTimeout(person.logName,1000)
-    
+
     // Output will be undefined as it is passed as a callback function and not
     // as a method in setTimeout which doesnot have access to the person object
     // To fix this use an anonymous function as callback and use the method inside
@@ -62,4 +63,25 @@
     // setTimeout(()=>{
     //     person.logName()
     // },1000)
+}
+
+// QUESTION 05:
+{
+    // CREATE A CALCULATOR USING AN OBJECT
+
+    let calculator = {
+        nums : [],
+        read(...args){
+            this.nums.push(...args)
+        },
+        add(){
+            return this.nums[0] + this.nums[1]
+        },
+        mul(){
+            return this.nums[0] * this.nums[1]
+        }
+    }
+    // calculator.read(2,3) // reads two numbers
+    // console.log(calculator.add()) // adds those two numbers
+    // console.log(calculator.mul()) // multiplies those two numbers
 }

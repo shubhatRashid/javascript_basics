@@ -85,3 +85,28 @@
     // console.log(calculator.add()) // adds those two numbers
     // console.log(calculator.mul()) // multiplies those two numbers
 }
+
+// QUESTION 06:
+{
+    var length = 5
+    const callback = function (){
+        console.log(this.length)
+    }
+
+    const object = {
+        length : 6,
+        method(fn){
+            fn()
+        }
+    }
+
+    const object2 = {
+        length : 6,
+        method(){
+            arguments[0]()
+        }
+    }
+    callback() // on browser returns 5
+    object.method(callback) // on browser returns 5
+    object2.method(callback,2) // returns 2 as len(arguments) is 2
+}

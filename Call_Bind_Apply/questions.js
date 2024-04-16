@@ -54,10 +54,30 @@
                 console.log(this.status)
             }
         }
-        innerObj.getStatus()
-        innerObj.getStatus.call(this)
+        // innerObj.getStatus()
+        // innerObj.getStatus.call(this)
     })
 
     // afternoon
     // undefined : this refers to parent object inside a function which is window
+}
+
+// QUESTION 04 :
+{
+    const animals = [
+        {species:'Lion',name:'King'},
+        {species:'Whale',name:'Queen'}
+    ]
+
+    function printAnimals (i) {
+        this.print  = function(){
+            console.log('# ' + i + " " + this.species + ": " + this.name)
+        }
+        this.print()
+    }
+
+    // print all animals using printAnimals
+    for (let i = 0;i<animals.length;i++){
+        printAnimals.call(animals[i],i)
+    }
 }

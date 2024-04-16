@@ -4,18 +4,18 @@
         name:'shubhat'
     }
 
-    function hello(time) {
+    function hello(greetings,time) {
         console.log('hello ' + this.name)
-        console.log('good '+time)
+        console.log(greetings +" "+ time)
     }
-    hello('morning') // returns 'hello undefined' as this keyword here would point to its parent which is window/global
+    hello('good','morning') // returns 'hello undefined' as this keyword here would point to its parent which is window/global
     // so how do we call hello with context of object on it ?
 
     // 1) one way is to make function a method of the object which is not always possible 
     // 2) another is to use call method
-    hello.call(object,['morning']) // return 'hello shubhat'
+    hello.call(object,'good','morning') // return 'hello shubhat'
 
     // call takes two arguments :
         // the object which we want it to acces using this keyword
-        // the arguments array which contains all the function arguments
+        // the arguments which are all the function arguments
 }

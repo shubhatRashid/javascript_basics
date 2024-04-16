@@ -20,7 +20,7 @@
 
 // QUESTION 02 :
 {
-    const age = 10
+    let age = 10
     const person = {
         name : 'shubhat',
         age : 20,
@@ -71,7 +71,7 @@
 
     function printAnimals (i) {
         this.print  = function(){
-            console.log('# ' + i + " " + this.species + ": " + this.name)
+            // console.log('# ' + i + " " + this.species + ": " + this.name)
         }
         this.print()
     }
@@ -80,4 +80,17 @@
     for (let i = 0;i<animals.length;i++){
         printAnimals.call(animals[i],i)
     }
+}
+
+// QUESTION 05 :
+{
+    // concatinate two arrays using apply
+    let arr1 = ['1','2','3']
+    let arr2 = ['6','5','4']
+
+    arr1.push.apply(arr1,arr2)
+    //console.log(arr1)
+
+    // find max of the resultant array ?
+        // console.log(Math.max.apply(null,arr1))
 }

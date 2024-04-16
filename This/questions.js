@@ -110,3 +110,4 @@
     object.method(callback) // on browser returns 5
     object2.method(callback,2) // returns 2 as len(arguments) is 2
 }
+

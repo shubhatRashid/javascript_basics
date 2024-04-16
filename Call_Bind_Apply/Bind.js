@@ -11,8 +11,8 @@
     
     const newFunction = hello.bind(object,'good','morning') // return 'hello shubhat'
     newFunction()
-
-    // apply takes two arguments :
+    // Bind provides us with new function that can be called anytime later
+    // bind takes two arguments :
         // the object which we want it to acces using this keyword
-        // the arguments array which contains all the function arguments
+        // the arguments which contains all the function arguments
 }

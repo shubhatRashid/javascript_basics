@@ -94,3 +94,27 @@
     // find max of the resultant array ?
         // console.log(Math.max.apply(null,arr1))
 }
+
+// QUESTION 06 :
+{
+    function f(){
+        console.log(this)
+    }
+
+    const user = {
+        g : f.bind(null)
+    }
+
+    // user.g()   ?
+    // window object
+}
+
+// QUESTION 07 :
+{
+    function f(){
+        console.log(this.name)
+    }
+
+    f = f.bind({name:'shubhat'}).bind({name:'rashid'})
+    f()
+}

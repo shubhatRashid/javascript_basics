@@ -146,7 +146,7 @@
     // checkPassword(user.sucess.bind(user),user.failed.bind(user))
 }
 
-// QUESTION 08 :
+// QUESTION 09 :
 {
     const user = {
         age : 24,

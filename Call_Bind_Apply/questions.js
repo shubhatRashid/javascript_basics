@@ -145,3 +145,23 @@
     //checkPassword(user.sucess,user.failed) // edit this line so that it runs as expected
     // checkPassword(user.sucess.bind(user),user.failed.bind(user))
 }
+
+// QUESTION 08 :
+{
+    const user = {
+        age : 24,
+        getAge : function(){
+            console.log(this.age)
+        },
+        getAgeArrow : () => {
+            console.log(this.age)
+        }
+    }
+    let person = {
+        age : 30
+    }
+
+    // user.getAge.call(person) // 30
+    // user.getAgeArrow.call(person) // undefined
+    // Arrow function doesnot change context its context is set by parent normal function or window
+}

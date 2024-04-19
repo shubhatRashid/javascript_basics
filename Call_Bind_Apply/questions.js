@@ -116,5 +116,32 @@
     }
 
     f = f.bind({name:'shubhat'}).bind({name:'rashid'})
-    f()
+    // f() ?
+    // bind chaining doesnot change the context that has been
+    // set once hence output is 'shubhat'
+}
+
+// QUESTION 08 :
+{
+    function checkPassword(sucess,failed){
+       let password = prompt('enter your password')
+       if (password=='shubhat'){
+        sucess()
+       }else{
+        failed()
+       }
+    }
+
+    const user = {
+        name : 'shubhat rashid',
+        sucess : function(){
+            console.log(this.name + ' logged in sucessfully')
+        },
+        failed : function(){
+            console.log(this.name + ' failed to login')
+        }
+    }
+
+    //checkPassword(user.sucess,user.failed) // edit this line so that it runs as expected
+    // checkPassword(user.sucess.bind(user),user.failed.bind(user))
 }

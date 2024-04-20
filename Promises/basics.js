@@ -67,29 +67,48 @@
     // QUESTION : What if there is a function which depends on 
     //            slow functions result, how to execute it ?
     // SOLUTION : this is also achieved using callbacks
-        {
-            console.log('start')
+        // {
+        //     console.log('start')
 
-            function slow(userName,cb){
-                setTimeout(() => {
-                    return cb(userName)
-                },1000)
-            }
+        //     function slow(userName,cb){
+        //         setTimeout(() => {
+        //             return cb(userName)
+        //         },1000)
+        //     }
 
-            function dependent(cb){
-                setTimeout(() => {
-                    return cb()
-                },1000)
-            }
+        //     function dependent(cb){
+        //         setTimeout(() => {
+        //             return cb()
+        //         },1000)
+        //     }
 
-            slow('shubhat',(message)=> {
-                console.log(message)
-                dependent(()=> {console.log('slow has executed')})
-            })
+        //     slow('shubhat',(message)=> {
+        //         console.log(message)
+        //         dependent(()=> {console.log('slow has executed')})
+        //     })
 
-            console.log('finish')
-        }
+        //     console.log('finish')
+        // }
     
     // QUESTION : What if there are more dependent function ?
     // SOLUTION : The code gets messy and messy each time we
-    //            use a callback so we need an alternative..
+    //            use a callback ,such a code is call 'Pyramid of doom' 
+    //            and such concept is called 'CallBack Hell' 
+    //            so we need an alternative..
+
+// PROMISES : javascript concepts which help in executing async code
+           // and handle their errors
+
+    {
+        const asyncfunction = new Promise((resolve,reject) => {
+            setTimeout(()=> {
+                result = true
+                if (result) resolve()
+                else reject()
+            },1000)
+        })
+
+        asyncfunction
+            .then(()=>console.log('sucessfull')) // alternate for callbacks
+            .catch(()=>console.log('rejected'))  // helps catch errors
+    }

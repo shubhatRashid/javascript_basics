@@ -148,35 +148,75 @@
         // }
 
     // Implementating promise chaining to our problem :
-        {
-            console.log('start')
+        // {
+        //     console.log('start')
 
-            function slow(userName){
-                return new Promise((resolve,reject) => {
-                    setTimeout(() => {
-                        resolve(userName)
-                    },1000)
-                })
+        //     function slow(userName){
+        //         return new Promise((resolve,reject) => {
+        //             setTimeout(() => {
+        //                 resolve(userName)
+        //             },1000)
+        //         })
                 
-            }
+        //     }
 
-            function dependent(){
-                return new Promise((resolve,reject) => {
-                    setTimeout(() => {
-                        resolve()
-                    },1000)
-                })
-            }
+        //     function dependent(){
+        //         return new Promise((resolve,reject) => {
+        //             setTimeout(() => {
+        //                 resolve()
+        //             },1000)
+        //         })
+        //     }
 
-            slow('shubhat')
-                .then((username)=>{
-                    console.log(username)
-                    return dependent()
-                })
-                .then(() => {
-                    console.log('slow was executed')
-                })
-                
-            console.log('finish')
-            // The code looks like a 'Pyramid dome' and hence there is a way to simplify it
-        }
+        //     slow('shubhat')
+        //         .then((username)=>{
+        //             console.log(username)
+        //             return dependent()
+        //         })
+        //         .then(() => {
+        //             console.log('slow was executed')
+        //         })
+
+        //     console.log('finish')
+        //     // The code looks looks much better
+        // }
+
+// PROMISE COMBINATORS :
+    // Promise.all()
+        // {
+        //         console.log('start')
+
+        //         function slow(userName){
+        //             return new Promise((resolve,reject) => {
+        //                 setTimeout(() => {
+        //                     return resolve(userName)
+        //                 },1000)
+        //             })
+                    
+        //         }
+
+        //         function dependent(){
+        //             return new Promise((resolve,reject) => {
+        //                 setTimeout(() => {
+        //                     return reject('dependent failed')
+        //                 },1000)
+        //             })
+        //         }
+
+        //         Promise.all([slow('shubhat'),dependent()])
+        //             .then((array)=>{
+        //                 console.log(array[0])
+        //                 console.log('slow was executed')
+        //             })
+        //             .catch((err) => {
+        //                 throw new Error(err)
+        //             })
+
+        //         console.log('finish')
+
+        //         // promise.all() executes all promises at a time and if one
+        //         // of them fails all fail.It returns an array of return values
+        //         // of all promises
+        // }
+    
+    

@@ -99,16 +99,84 @@
 // PROMISES : javascript concepts which help in executing async code
            // and handle their errors
 
-    {
-        const asyncfunction = new Promise((resolve,reject) => {
-            setTimeout(()=> {
-                result = true
-                if (result) resolve()
-                else reject()
-            },1000)
-        })
+    // {
+    //     const asyncfunction = new Promise((resolve,reject) => {
+    //         setTimeout(()=> {
+    //             result = true
+    //             if (result) resolve()
+    //             else reject()
+    //         },1000)
+    //     })
 
-        asyncfunction
-            .then(()=>console.log('sucessfull')) // alternate for callbacks
-            .catch(()=>console.log('rejected'))  // helps catch errors
-    }
+    //     asyncfunction
+    //         .then(()=>console.log('sucessfull')) // alternate for callbacks
+    //         .catch(()=>console.log('rejected'))  // helps catch errors
+    // }
+
+    // Implememtating promises to our problem :
+        // {
+        //     console.log('start')
+
+        //     function slow(userName){
+        //         return new Promise((resolve,reject) => {
+        //             setTimeout(() => {
+        //                 resolve(userName)
+        //             },1000)
+        //         })
+                
+        //     }
+
+        //     function dependent(){
+        //         return new Promise((resolve,reject) => {
+        //             setTimeout(() => {
+        //                 resolve()
+        //             },1000)
+        //         })
+        //     }
+
+        //     slow('shubhat')
+        //         .then((userName) => {
+        //             console.log(userName)
+        //             dependent()
+        //                 .then(()=> {
+        //                     console.log('slow was executed')
+        //                 })
+        //     })
+
+        //     console.log('finish')
+        //     // The code looks like a 'Pyramid dome' and hence there is a way to simplify it
+        // }
+
+    // Implementating promise chaining to our problem :
+        {
+            console.log('start')
+
+            function slow(userName){
+                return new Promise((resolve,reject) => {
+                    setTimeout(() => {
+                        resolve(userName)
+                    },1000)
+                })
+                
+            }
+
+            function dependent(){
+                return new Promise((resolve,reject) => {
+                    setTimeout(() => {
+                        resolve()
+                    },1000)
+                })
+            }
+
+            slow('shubhat')
+                .then((username)=>{
+                    console.log(username)
+                    return dependent()
+                })
+                .then(() => {
+                    console.log('slow was executed')
+                })
+                
+            console.log('finish')
+            // The code looks like a 'Pyramid dome' and hence there is a way to simplify it
+        }

@@ -219,7 +219,7 @@
         //         // of all promises
         // }
     
-    // Promise.race() : return only that promise which is resolved first
+    // Promise.race() : return only first promise 
         // {
         //         console.log('start')
 
@@ -227,7 +227,7 @@
         //             return new Promise((resolve,reject) => {
         //                 setTimeout(() => {
         //                     return resolve(userName)
-        //                 },1000)
+        //                 },100)
         //             })
                     
         //         }
@@ -236,7 +236,7 @@
         //             return new Promise((resolve,reject) => {
         //                 setTimeout(() => {
         //                     return reject('dependent failed')
-        //                 },100)
+        //                 },1000)
         //             })
         //         }
 
@@ -285,3 +285,5 @@
         //         console.log('finish')
 
         // }
+
+    // Promise.any() : return the first promise which is resolved 

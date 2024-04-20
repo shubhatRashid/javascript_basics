@@ -182,7 +182,7 @@
         // }
 
 // PROMISE COMBINATORS :
-    // Promise.all()
+    // Promise.all() : executes all promises at a time and return array of promise values
         // {
         //         console.log('start')
 
@@ -219,4 +219,69 @@
         //         // of all promises
         // }
     
-    
+    // Promise.race() : return only that promise which is resolved first
+        // {
+        //         console.log('start')
+
+        //         function slow(userName){
+        //             return new Promise((resolve,reject) => {
+        //                 setTimeout(() => {
+        //                     return resolve(userName)
+        //                 },1000)
+        //             })
+                    
+        //         }
+
+        //         function dependent(){
+        //             return new Promise((resolve,reject) => {
+        //                 setTimeout(() => {
+        //                     return reject('dependent failed')
+        //                 },100)
+        //             })
+        //         }
+
+        //         Promise.race([slow('shubhat'),dependent()])
+        //             .then((result)=>{
+        //                 console.log(result)
+        //             })
+        //             .catch((err) => {
+        //                 throw new Error(err)
+        //             })
+
+        //         console.log('finish')
+
+        // }
+
+    // Promise.allSettled() : return an array of results, those who resolved returns their 
+    //                        value and those who failed return their error messages
+        // {
+        //         console.log('start')
+
+        //         function slow(userName){
+        //             return new Promise((resolve,reject) => {
+        //                 setTimeout(() => {
+        //                     return resolve(userName)
+        //                 },1000)
+        //             })
+                    
+        //         }
+
+        //         function dependent(){
+        //             return new Promise((resolve,reject) => {
+        //                 setTimeout(() => {
+        //                     return reject('dependent failed')
+        //                 },100)
+        //             })
+        //         }
+
+        //         Promise.allSettled([slow('shubhat'),dependent()])
+        //             .then((result)=>{
+        //                 console.log(result)
+        //             })
+        //             .catch((err) => {
+        //                 throw new Error(err)
+        //             })
+
+        //         console.log('finish')
+
+        // }

@@ -287,3 +287,40 @@
         // }
 
     // Promise.any() : return the first promise which is resolved 
+
+
+// ASYNC AWAIT APPROACH FOR PROMISES :
+    // {
+    //         console.log('start')
+
+    //         function slow(userName){
+    //             return new Promise((resolve,reject) => {
+    //                 setTimeout(() => {
+    //                     resolve(userName)
+    //                 },1000)
+    //             })
+                
+    //         }
+
+    //         function dependent(){
+    //             return new Promise((resolve,reject) => {
+    //                 setTimeout(() => {
+    //                     resolve()
+    //                 },1000)
+    //             })
+    //         }
+
+    //         const result = async () => {
+    //             try {
+    //                 const slowPromise = await slow('shubhat')
+    //                 console.log(slowPromise)
+    //                 const dependentPromise = await dependent()
+    //                 console.log('slow executed')
+    //             } catch (error) {
+    //                 console.log(error)
+    //             }
+    //         }
+    //         result()
+    //         console.log('finish')
+    //         // The code looks looks much better
+    // }

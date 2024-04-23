@@ -87,5 +87,66 @@
 //         .catch((error) => console.log(error))
 // }
 
+// QUESTION : 05
+// {
+//     function fn(state) {
+//         return new Promise((resolve,reject) => {
+//             if(state === true){
+//                 resolve('sucess')
+//             }else{
+//                 reject('error')
+//             }
+//         })
+//     }
 
+//     let promise = fn(true)
+
+//     promise
+//         .then((data) => {
+//             console.log(data)
+//             return fn(false)
+//         })
+//         .catch((error) => {
+//             console.log(error)
+//             throw 'Error Caught'
+//             return fn(true)
+//         })
+//         .then((data) => {
+//             console.log(data)
+//             return fn(true)
+//         })
+//         .catch((error) => console.log(error))
+// }
+
+// QUESTION : 06
+// {
+//     // rewrite this code using async await and get similar results
+//     function loadJson(url){
+//         return fetch(url).then((response) => {
+//             if (response.status === 200){
+//                 return response.json()
+//             }else{
+//                 throw new Error(response.status)
+//             }
+//         })
+//     }
+
+//     // loadJson('https://jsonplaceholder.typicode.com/users')
+//     //     .then((data)=> {
+//     //         console.log(data)
+//     //     }).catch(error=>console.log(error))
+
+//     async function loadJson2(url){
+//         try {
+//             response = await fetch(url)
+//             data = await response.json()
+//             console.log(data)
+//         } catch (error) {
+//             console.log(error)
+//         }
+//     }
+//     loadJson2('https://jsonplaceholder.typicode.com/users')
+
+
+// }
 

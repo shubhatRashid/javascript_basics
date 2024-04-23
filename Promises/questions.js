@@ -1,16 +1,36 @@
 // QUESTION :01
-{
-    // guess the output
+// {
+//     // guess the output
+//     console.log('start')
+
+//     const promise = new Promise((resolve,reject) => {
+//         console.log(1)
+//         resolve(2)
+//         console.log(3)
+//     })
+
+//     promise.then((res) => console.log(res))
+
+//     console.log('finish')
+
+// }
+
+// QUESTION : 02:
+{   
+    // Guess the output 
     console.log('start')
 
-    const promise = new Promise((resolve,reject) => {
+    const fn = () => new Promise((resolve,reject) => {
         console.log(1)
-        resolve(2)
-        console.log(3)
+        resolve('sucess')
     })
 
-    promise.then((res) => console.log(res))
+    console.log('middle')
 
-    console.log('finish')
+    fn().then((res) => {
+        console.log(res)
+    })
 
+    console.log('end')
+    
 }

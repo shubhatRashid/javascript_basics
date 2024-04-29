@@ -1,3 +1,3 @@
 Question :
     Create a button that displays how many times the button has been clicked 
-    and how many times the throttle function has been invoked
+    and how many times the debauncing function has been invoked

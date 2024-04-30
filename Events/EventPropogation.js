@@ -25,7 +25,8 @@
 
 // Event Capturing :
 // We can also do reverse of bubbling by capturing the events and firing them top to down
-// by using {capture:true} as third parameter in addEventListener function.
+// by using {capture:true} as third parameter in addEventListener function. the event captured will
+// be fired first
 
 // Stop Progogation:
 // just use event.stopPropogation() in the eventlistener callback function

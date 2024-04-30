@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: 'center';
+    align-items: 'center';
+}
+#div{
+    display: flex;
+    flex-direction: column;
+    justify-content: 'center';
+    align-items: 'center';
+    border:solid;
+    border-color: blue;
+    border-width: 100px;
+    padding:10px;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    justify-content: 'center';
+    align-items: 'center';
+    border:solid;
+    border-color:yellow;
+    border-width: 100px;
+    padding:10px;
+}

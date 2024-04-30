@@ -1,0 +1,8 @@
+let div = document.getElementById('div')
+let form = document.getElementById('form')
+let button = document.getElementById('button')
+
+div.addEventListener('click',() => {alert('div clicked')},{capture:true})   
+form.addEventListener('click',() => {alert('form clicked')},{capture:true})
+button.addEventListener('click',() => {alert('button clicked')},{capture:true})
+

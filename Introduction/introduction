@@ -21,6 +21,18 @@ STATIC VS DYNAMIC LANGUAGEES :
     Dynamic languages can changes type of a variable anytime e.g python , js . These languages are
     prone to errors and hence typescript was developed to overcome such and many more limitations of js.
 
-Note : 
+NOTE : 
     Javascript is a single threaded language i.e it uses one core at a time.
+
+PRIMITIVE VS NON-PRIMITIVE DATA TYPES :
+    Predefined data types provided by js are also known as primitive datatypes.
+        Number,
+        String,
+        Boolean,
+        null,
+        undefined,
+        BigInt
+    Non premitive data types are derived from primitive ones e.g 
+        Arrays,
+        objects
 

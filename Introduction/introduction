@@ -1,0 +1,26 @@
+WHY DO WE NEED A LANGUAGE ?
+    Before starting an application , it resides in SSD (solid state drive) of the machine.
+    When we start an application the compiler converts the code of the application into 0s and 1s
+    This code is fed to RAM which understands this code and runs the application.
+
+    Directly writing code in 0s and 1s is quite difficult hence languages like js,python,c++ are used.
+
+INTERPRETED VS COMPILED LANGUAGES :
+    Languages which take the code file and form a compiled file of it before running it are compiled
+    languages e.g c,c++ These languages do not run any code if there is an error in the code and hence 
+    are safer to use.
+
+    Langueges which compile code line by line are interpreted languages e.g python, js etc.
+    If there is an error in the code . The code above the error line will still work.
+
+STATIC VS DYNAMIC LANGUAGEES :
+    Static languages set the type of a variable at the time of decleration and this type cannot 
+    be changed afterwards e.g c++ hence These languages are efficient as they are less prone to 
+    errors.
+
+    Dynamic languages can changes type of a variable anytime e.g python , js . These languages are
+    prone to errors and hence typescript was developed to overcome such and many more limitations of js.
+
+Note : 
+    Javascript is a single threaded language i.e it uses one core at a time.
+

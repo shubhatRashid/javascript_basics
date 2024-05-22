@@ -98,28 +98,40 @@
 }
 
 // QUESTION 04 :
-{   
-    // MAKE A PRIVATE COUNTER USING CLOSURES
-    function counter()  {
-        var _counter = 0
-        function add(increment){
-            return _counter += increment
-        }
+// {   
+//     // MAKE A PRIVATE COUNTER USING CLOSURES
+//     function counter()  {
+//         let counter = 0
+//         function add (increment){
+//             counter += increment
+//         }
+//         function subtreact (decrement){
+//             counter -= decrement
+//         }
+//         function show (){
+//             console.log(counter)
+//         }
 
-        function retrieve(){
-            console.log(_counter)
-        }
-        return {
-            add,
-            retrieve
-        }
-    }
+//         return {
+//             counter : counter,
+//             add : add,
+//             subtreact : subtreact,
+//             show : show
+//         }
+//     }
+//     let newCounter = counter()
+//     newCounter.add(5)
+//     newCounter.show()
+//     newCounter.add(10)
+//     newCounter.show()
+//     newCounter.subtreact(8)
+//     newCounter.show()
 
-    // const c = counter()
-    // c.add(5)
-    // c.add(15)
-    // c.retrieve()
-}
+//     // const c = counter()
+//     // c.add(5)
+//     // c.add(15)
+//     // c.retrieve()
+// }
 
 // QUESTION 05 :
 {
@@ -164,10 +176,5 @@
     // console.timeEnd("first time")
 
     // Now the second call takes very less time 
-}
-
-// QUESTION 06 :
-{
-    
 }
 

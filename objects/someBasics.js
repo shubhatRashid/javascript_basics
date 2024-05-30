@@ -123,6 +123,10 @@
     //     // This newUser object doesnot contain information of some nested objects i.e game1 object
     //     // This is called shallow copying 
 
-    //     const anotherNewUser = JSON.parse(JSON.stringify(user))
+    //     let anotherNewUser = JSON.parse(JSON.stringify(user))
     //     console.log(anotherNewUser)
+
+    //     let newUser2 = Object.assign({},user)
+    //     console.log(newUser2)
+        
     // }

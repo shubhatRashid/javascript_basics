@@ -33,10 +33,10 @@
     const multiply = (x={...value}) => {
         return x.number *= 2
     }
-    // console.log(multiply()) // returns 20
-    // console.log(multiply()) // returns 20
-    // console.log(multiply(value)) // returns 20
-    // console.log(multiply(value)) // returns 40
+    console.log(multiply()) 
+    console.log(multiply()) 
+    console.log(multiply(value)) 
+    console.log(multiply(value)) 
     
     // when nothing is provided to multiply it 
     // uses value makes a copy of it using spread

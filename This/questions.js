@@ -14,35 +14,35 @@
 // }
 
 // QUESTION 02:
-{
-    // What will be the output ?
-    const makeUser = function(){
-        return {
-            name : 'john',
-            ref : this
-        }
-    }
+// {
+//     // What will be the output ?
+//     const makeUser = function(){
+//         return {
+//             name : 'john',
+//             ref : this
+//         }
+//     }
 
-    const newUser = makeUser()
-    console.log(newUser.ref.name)
-    // Solution : output undefined as this will refer to window and not the object 
-    //            only incase of a method inside the object will it refer to the 
-    //            Object.
-}
+//     const newUser = makeUser()
+//     console.log(newUser.ref.name)
+//     // Solution : output undefined as this will refer to window and not the object 
+//     //            only incase of a method inside the object will it refer to the 
+//     //            Object.
+// }
 
 // QUESTION 03:
-{
-    // Fix the above question to get the expected output?
-    const makeUser = function(){
-        return {
-            name : 'john',
-            ref : function() {return this}
-        }
-    }
+// {
+//     // Fix the above question to get the expected output?
+//     const makeUser = function(){
+//         return {
+//             name : 'john',
+//             ref : function() {return this} // note donot use IIFE here a they are not considered methods and will refer to global object/window
+//         }
+//     }
 
-    const newUser = makeUser()
-    // console.log(newUser.ref().name) returns 'john'
-}
+//     const newUser = makeUser()
+//     // console.log(newUser.ref().name) returns 'john'
+// }
 
 // QUESTION 04:
 // {   
@@ -53,7 +53,7 @@
 //             console.log(this.firstName)
 //         }
 //     }
-//     //setTimeout(person.logName,1000)
+//     setTimeout(person.logName,1000)
 
 //     // Output will be undefined as it is passed as a callback function and not
 //     // as a method in setTimeout which doesnot have access to the person object

@@ -17,6 +17,22 @@
     //     }
     // }
 
+// FUNCTION INVOCATION
+    // {    
+    //     // Every time a function is invoked a new execution context in added to 
+    //     //  execution context stack. This execution context like the window object will 
+    //     //  have its own properties and memory and is accessible using this keyword.
+    //     function a (){}
+
+    //     function b (){
+    //         a()
+    //     }
+
+    //     b()
+
+    //     // executionStack = [b,a,global]
+    // }
+    
 // FIRST CLASS FUNCTIONS
     // {
     //     // functions which can be treated as variables :

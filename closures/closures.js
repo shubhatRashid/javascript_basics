@@ -40,4 +40,23 @@
 // NOTE : CLOSURE ARE CREATED IN ORDER TO GIVE FUNCTIONS ACCESS TO THEIR PRIVATE VARIABLES INCASE
 //        THEY ARE CALLED OUTSIDE OF THEIR LEXICAL SCOPE
 
-// SCOPE CHAINING : IN A CLOSURE A FUNCTION HAS ACCESS TO ITS PARENTS SCOPE AND ITS PARENTS PARENTS SCOPE AND SO ON.
+// SCOPE CHAINING : 
+{
+    function b (){
+        console.log(myvar)
+    }
+    
+    function a (){
+        var myvar = 1
+        b()
+    }
+
+    var myvar = 0
+    a()
+
+    // Execution context stack = [b,a,global]
+    // when teh myvar was not found in execution context of b. js engine starts to look 
+    // for it in execution context stack below the current stack and so on untill it finds
+    // the variable or reaches global execution context. This is called scope chaining where
+    // functions can access execution contexts of  those below them in execution context stack.
+}

@@ -22,15 +22,22 @@
     //     // Every time a function is invoked a new execution context in added to 
     //     //  execution context stack. This execution context like the window object will 
     //     //  have its own properties and memory and is accessible using this keyword.
-    //     function a (){}
-
     //     function b (){
-    //         a()
+    //         var myvar = 'b'
+    //         console.log(myvar)
     //     }
 
-    //     b()
+    //     function a (){
+    //         var myvar = 'a'
+    //         console.log(myvar)
+    //         b()
+    //     }
 
-    //     // executionStack = [b,a,global]
+    //     var myvar = 'global'
+    //     console.log(myvar)
+    //     a()
+
+    //     // executionContextStack = [b,a,global]
     // }
     
 // FIRST CLASS FUNCTIONS

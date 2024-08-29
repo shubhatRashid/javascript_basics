@@ -31,16 +31,16 @@
 
     // QUESTION :
         // {
-        //     console.log('start')
+        //     // console.log('start')
 
-        //     function slow(userName){
-        //         setTimeout(() => {
-        //             return userName
-        //         },1000)
-        //     }
-        //     const message = slow('shubhat')
-        //     console.log(message)
-        //     console.log('finish')
+        //     // function slow(userName){
+        //     //     setTimeout(() => {
+        //     //         return userName
+        //     //     },1000)
+        //     // }
+        //     // const message = slow('shubhat')
+        //     // console.log(message)
+        //     // console.log('finish')
 
         //     // output :
         //         // start
@@ -324,3 +324,35 @@
     //         console.log('finish')
     //         // The code looks looks much better
     // }
+
+
+
+
+function slow(username){
+    return new Promise((resolve,reject) => {
+        setTimeout(() => resolve(username),1000)
+    })
+}
+
+function dependent(username){
+    return new Promise((resolve,reject) => {
+        setTimeout(()=> resolve(username),1000)
+    })
+}
+
+function moredependent(username){
+    setTimeout(()=>console.log('more dependent username is '+ username),1000)
+}
+
+
+console.log('start')
+slow('shubhat')
+                .then((u)=>{
+                    console.log(u)
+                    dependent(u)
+                                .then((u)=>{
+                                    console.log('dependent username is '+u)
+                                    moredependent(u)
+                                })
+                })
+console.log('finish')

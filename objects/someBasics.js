@@ -1,7 +1,13 @@
 //OBJECTS
     // {
         
-    //     //Data structure where data is stored as key:value pair 
+    //     Data structure where data is stored as key:value pair or a collection of name:value pairs.
+    
+    //          The name may be defined more than once, but can have one value 
+    //          in any given context.
+
+    //          The value may be more name value pairs i.e can be even another object.
+    
     //     const person = {
     //         name : 'shubhat',
     //         age : 26,
@@ -16,6 +22,18 @@
     //     console.log(person)
 
     // }
+
+// THE GLOBAL OBJECT OR WINDOW OBJECT
+    {
+    //   In js , global == not inside a function.
+
+    //   Javascript engine creates a global object as for 
+    //   context execution which is referred to by using 'this' 
+    //   keyword .
+
+    //  Every function or variable(var) created on global environment becomes 
+    //  a property in this object.
+    }
 
 // SYNTAX FOR DYNAMIC ENTRIES
     // {

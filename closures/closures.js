@@ -55,8 +55,8 @@
     a()
 
     // Execution context stack = [b,a,global]
-    // when teh myvar was not found in execution context of b. js engine starts to look 
-    // for it in execution context stack below the current stack and so on untill it finds
+    // when the myvar was not found in execution context of b. js engine starts to look 
+    // for it in execution context stack below the current execution context and so on untill it finds
     // the variable or reaches global execution context. This is called scope chaining where
     // functions can access execution contexts of  those below them in execution context stack.
 }

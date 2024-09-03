@@ -39,4 +39,24 @@
                                 console.log(typeof(a+b)) // string
                                 console.log(a-b) //converts both to number hence -1
                                 console.log(typeof(a-b)) // number
+
                             }
+                        // 0 -> false
+                        // greater=1 -> true
+// Note: 
+    // 'undefined is converted to NaN'
+    // 'null is converted to 0'
+
+// Comparison operators :      
+                        {
+                            console.log(1<2<3) // return true 
+                            console.log(6<4<3) // returns true 
+                            // but why? it should be false mathematically?
+
+                            // < operator has left to right associativity
+                            // and hence 6<4 is first executed which returns
+                            // false now expression becones false < 3 here now 
+                            // coercion happens and false is converted to 0
+                            // so expression is 0<3 which return true
+                        }
+

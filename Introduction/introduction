@@ -24,15 +24,3 @@ STATIC VS DYNAMIC LANGUAGEES :
 NOTE : 
     Javascript is a single threaded language i.e it uses one core at a time.
 
-PRIMITIVE VS NON-PRIMITIVE DATA TYPES :
-    Predefined data types provided by js are also known as primitive datatypes.
-        Number,
-        String,
-        Boolean,
-        null,
-        undefined,
-        BigInt
-    Non premitive data types are derived from primitive ones e.g 
-        Arrays,
-        objects
-

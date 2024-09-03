@@ -1,3 +1,17 @@
+// A primitive type represents a single value.
+
+// PRIMITIVE VS NON-PRIMITIVE DATA TYPES :
+// Predefined data types provided by js are also known as primitive datatypes.
+//         Number,
+//         String,
+//         Boolean,
+//         null(lack of existance set by coder),
+//         undefined(lack of existance set by engine),
+//         BigInt
+// Non premitive data types are derived from primitive ones e.g 
+//         Arrays,
+//         objects
+
 // Earlier in js only "var" keyword was used which means any kind of varaible
 // it could be number,string or boolean
 // Now there are two more keywords to declear a variable i.e
@@ -31,7 +45,7 @@
 
 // LET and const KEYWORD :
 // {
-//     // Variables defined with let or const keyword are available in their parent block only and not outside of it
+//     // Variables defined with let or const keyword are available in their block only and not outside of it
 //     // variable decleared with const cannot be reassigned or changes after decleration
     
 //     if (true){

@@ -10,8 +10,8 @@
 
         Global Scope : All of the file is global scope 
         
-        Lexical Scope : The scope where a variable or function is defined*/
-
+        Lexical Scope : The scope where a variable or function is defined
+        */
         
     }
 

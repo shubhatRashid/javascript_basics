@@ -10,6 +10,46 @@
     //     }
     // }
 
+// FUNCTION DECLERATION WITH DEFAULT VALUES
+    {
+    //     function returnHello() {
+    //         return 'hello'
+    //     }
+
+    //     // with parameters
+    //     function greet(greetMsg){
+    //         return greetMsg
+    //     }
+
+        // with default parameters 
+    // function greet2(greetMsg){
+    //     greetMsg = greetMsg || 'hello' 
+    //     // the above expression || has higher precedence and 
+    //     // is executed first which takes the truthy value and 
+    //     // returns that value into greetMsg
+    //     return greetMsg
+    // }
+    // //NOTE - All below calls return default values as all of them
+    // //        are falsy values
+    // console.log(greet2())
+    // console.log(greet2(''))
+    // console.log(greet2(0))
+    // console.log(greet2(null)) 
+
+        // with default parameters and shorter code
+    // function greet3(greetMsg='hello'){
+    //     return greetMsg
+    // }
+    // //NOTE - In this case strict equality is used behing the scenes
+    // //       falsy values are passed as they are like in below calls
+    // console.log(greet3())
+    // console.log(greet3('shubhat'))
+    // console.log(greet3(''))
+    // console.log(greet3(0))
+    // console.log(greet3(null)) 
+               
+    }
+
 // FUNCTION EXPRESSION AND ANONYMOUS FUNCTION
     // {
     //     const anfun = function(){

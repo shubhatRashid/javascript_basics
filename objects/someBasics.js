@@ -17,6 +17,7 @@
     //     }
 
     //     // functions inside objects are termed as methods
+           // if name:value is a primitive its called its property.
     //     // use delete keyword to delete a property inside objects
     //     delete person.age
     //     console.log(person)
@@ -58,7 +59,7 @@
     //     for (key in user){
     //         console.log(key,user[key])
     //     }
-    // }
+    // } 
 
 // STRINGIFY AND PARSE
     // {

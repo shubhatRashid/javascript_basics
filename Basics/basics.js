@@ -9,11 +9,11 @@
 //                          running.
 
 // Event Queue : Events which are called by external engines like browser window
-//                are saved in a queue calles event queue.For an event to occur the 
-//                the exucution context from previous events or code must ve empty.
+//                are saved in a queue called event queue.For an event to occur the 
+//                the exucution context from previous events or code must be empty.
 
 // Dynamic Typing : Js engine figures out what type of data a variable holds by 
-//                  itself during executi on
+//                  itself during execution
 
 // Operators : Functions which are written differently(infix notation instead of prefix) than other normal functions
 //                which generally take two values and return one value

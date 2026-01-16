@@ -5,8 +5,9 @@
 //         Number,
 //         String,
 //         Boolean,
-//         null(lack of existance set by coder),
-//         undefined(lack of existance set by engine),
+//         null(lack of existance set by coder,typeof null = object),
+//         undefined(lack of existance set by engine, typeof undefned = undefined),
+//          Nan (typeof number ,represents an invalid datatype e.g abc123)
 //         BigInt
 // Non premitive data types are derived from primitive ones e.g 
 //         Arrays,

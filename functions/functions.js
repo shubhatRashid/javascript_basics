@@ -138,7 +138,7 @@
     //     // Values passed at the time of calling are arguments
     // }
 
-// REST AND SPREAD OPERATORS
+// REST PARAMETER AND SPREAD OPERATOR
     // {   
     //     // REST OPERATOR TAKES ALL VALUES AND GIVES AN ARRAY OF THEM :
     //     let myarr = [1,2,3,4]

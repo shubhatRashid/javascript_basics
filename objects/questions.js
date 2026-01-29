@@ -6,7 +6,7 @@
     //         b : 2,
     //         a : 4
     //     }
-    //     // console.log(obj)
+    //     // console.log(obj)  
     //     // solution : in output a will be 4 as it is reassigned a value 4 later
     // }
 

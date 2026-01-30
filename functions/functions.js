@@ -141,6 +141,7 @@
 // REST PARAMETER AND SPREAD OPERATOR
     // {   
     //     // REST OPERATOR TAKES ALL VALUES AND GIVES AN ARRAY OF THEM :
+
     //     let myarr = [1,2,3,4]
     //     function restfunction (...array){ // ... array is rest operator
     //         console.log(array)
@@ -150,6 +151,7 @@
 
 
     //     // SPREAD OPERATOR SPREADS ALL VALUES OF AN ARRAY INTO INDIVISUAL ONES
+    
     //     let myarr1 = [1,2,3,4]
     //     function spreadfunction (array){ // ... array is spread operator
     //         console.log(...array)

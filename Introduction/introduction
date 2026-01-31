@@ -71,7 +71,9 @@ NOTE :
                                 "string" -> true
 
                             }
+                
 // Note: 
+    // There are total 6 falsy values : false,0,'',null,NaN,undefined . any other values are truthy values including [],{}.
     // 'undefined is converted to NaN'
     // 'null is converted to 0'
 

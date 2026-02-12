@@ -23,51 +23,51 @@
     }
 
     // NOTE :
-    // Javascript always executes synchoronous code first and the asynchronous
+    // Javascript always executes synchoronous code first and then asynchronous
     // as javasscript is single threaded language and connot run parallel
     // operations
 
 // CALLBACKS : functions which are passed as arguments to other functions
 
     // QUESTION :
-        // {
-        //     // console.log('start')
+        {
+            // console.log('start')
 
-        //     // function slow(userName){
-        //     //     setTimeout(() => {
-        //     //         return userName
-        //     //     },1000)
-        //     // }
-        //     // const message = slow('shubhat')
-        //     // console.log(message)
-        //     // console.log('finish')
+            // function slow(userName){
+            //     setTimeout(() => {
+            //         return userName
+            //     },1000)
+            // }
+            // const message = slow('shubhat')
+            // console.log(message)
+            // console.log('finish')
 
-        //     // output :
-        //         // start
-        //         // undefined
-        //         // finish
+            // output :
+            //     start
+            //     undefined
+            //     finish
 
-        //     // how to run this code properly ?
+            // // how to run this code properly ?
 
-        // }
+        }
     // SOLUTION : using callbacks
-        // {   
-        //     console.log('start')
+        {   
+            // console.log('start')
 
-        //     function slow(userName,cb){
-        //         setTimeout(() => {
-        //             return cb(userName)
-        //         },1000)
-        //     }
-        //     slow('shubhat',(message)=> {console.log(message)})
-        //     console.log('finish')
+            // function slow(userName,cb){
+            //     setTimeout(() => {
+            //         return cb(userName)
+            //     },1000)
+            // }
+            // slow('shubhat',(message)=> {console.log(message)})
+            // console.log('finish')
 
-        // }
+        }
 
     // QUESTION : What if there is a function which depends on 
     //            slow functions result, how to execute it ?
     // SOLUTION : this is also achieved using callbacks
-        // {
+        {
         //     console.log('start')
 
         //     function slow(userName,cb){
@@ -88,7 +88,7 @@
         //     })
 
         //     console.log('finish')
-        // }
+        }
     
     // QUESTION : What if there are more dependent function ?
     // SOLUTION : The code gets messy and messy each time we
@@ -99,7 +99,7 @@
 // PROMISES : javascript concepts which help in executing async code
            // and handle their errors
 
-    // {
+    {
     //     const asyncfunction = new Promise((resolve,reject) => {
     //         setTimeout(()=> {
     //             result = true
@@ -111,10 +111,10 @@
     //     asyncfunction
     //         .then(()=>console.log('sucessfull')) // alternate for callbacks
     //         .catch(()=>console.log('rejected'))  // helps catch errors
-    // }
+    }
 
     // Implememtating promises to our problem :
-        // {
+        {
         //     console.log('start')
 
         //     function slow(userName){
@@ -145,10 +145,10 @@
 
         //     console.log('finish')
         //     // The code looks like a 'Pyramid dome' and hence there is a way to simplify it
-        // }
+        }
 
     // Implementating promise chaining to our problem :
-        // {
+        {
         //     console.log('start')
 
         //     function slow(userName){
@@ -179,11 +179,11 @@
 
         //     console.log('finish')
         //     // The code looks looks much better
-        // }
+        }
 
 // PROMISE COMBINATORS :
     // Promise.all() : executes all promises at a time and return array of promise values
-        // {
+        {
         //         console.log('start')
 
         //         function slow(userName){
@@ -217,10 +217,10 @@
         //         // promise.all() executes all promises at a time and if one
         //         // of them fails all fail.It returns an array of return values
         //         // of all promises
-        // }
+        }
     
     // Promise.race() : return only first promise 
-        // {
+        {
         //         console.log('start')
 
         //         function slow(userName){
@@ -250,11 +250,11 @@
 
         //         console.log('finish')
 
-        // }
+        }
 
     // Promise.allSettled() : return an array of results, those who resolved returns their 
     //                        value and those who failed return their error messages
-        // {
+        {
         //         console.log('start')
 
         //         function slow(userName){
@@ -284,75 +284,44 @@
 
         //         console.log('finish')
 
-        // }
+        }
 
     // Promise.any() : return the first promise which is resolved 
 
 
 // ASYNC AWAIT APPROACH FOR PROMISES :
-    // {
-    //         console.log('start')
+    {
+            // console.log('start')
 
-    //         function slow(userName){
-    //             return new Promise((resolve,reject) => {
-    //                 setTimeout(() => {
-    //                     resolve(userName)
-    //                 },1000)
-    //             })
+            // function slow(userName){
+            //     return new Promise((resolve,reject) => {
+            //         setTimeout(() => {
+            //             resolve(userName)
+            //         },1000)
+            //     })
                 
-    //         }
+            // }
 
-    //         function dependent(){
-    //             return new Promise((resolve,reject) => {
-    //                 setTimeout(() => {
-    //                     resolve()
-    //                 },1000)
-    //             })
-    //         }
+            // function dependent(){
+            //     return new Promise((resolve,reject) => {
+            //         setTimeout(() => {
+            //             resolve()
+            //         },1000)
+            //     })
+            // }
 
-    //         const result = async () => {
-    //             try {
-    //                 const slowPromise = await slow('shubhat')
-    //                 console.log(slowPromise)
-    //                 const dependentPromise = await dependent()
-    //                 console.log('slow executed')
-    //             } catch (error) {
-    //                 console.log(error)
-    //             }
-    //         }
-    //         result()
-    //         console.log('finish')
+            // const result = async () => {
+            //     try {
+            //         const slowPromise = await slow('shubhat')
+            //         console.log(slowPromise)
+            //         const dependentPromise = await dependent()
+            //         console.log('slow executed')
+            //     } catch (error) {
+            //         console.log(error)
+            //     }
+            // }
+            // result()
+            // console.log('finish')
     //         // The code looks looks much better
-    // }
+     }
 
-
-
-
-function slow(username){
-    return new Promise((resolve,reject) => {
-        setTimeout(() => resolve(username),1000)
-    })
-}
-
-function dependent(username){
-    return new Promise((resolve,reject) => {
-        setTimeout(()=> resolve(username),1000)
-    })
-}
-
-function moredependent(username){
-    setTimeout(()=>console.log('more dependent username is '+ username),1000)
-}
-
-
-console.log('start')
-slow('shubhat')
-                .then((u)=>{
-                    console.log(u)
-                    dependent(u)
-                                .then((u)=>{
-                                    console.log('dependent username is '+u)
-                                    moredependent(u)
-                                })
-                })
-console.log('finish')

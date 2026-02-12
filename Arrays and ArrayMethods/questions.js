@@ -19,16 +19,20 @@ const results = [
     // }
 
 // QUESTION : RETURN NAMES OF STUDENTS WHO SCORED MORE THAN 35
-    {
-        const passStudents = results.filter((r,i) => r.marks >= 35)
-                                    .map((r,i) => r.name)
-        console.log(passStudents)
-    }
-// QUESTION :   RETURN DETAILS OF THOSE STUDENTS WHO SCORED MORE THAN 35 MARKS AND ROLLNUMBER > 12
     // {
     //     const passStudents = results.filter((r,i) => r.marks >= 35)
-    //                                 .filter((r,i) => r.rollNumber > 12)
+    //                                 .map((r,i) => r.name)
     //     console.log(passStudents)
+    // }
+// QUESTION :   RETURN DETAILS OF THOSE STUDENTS WHO SCORED MORE THAN 35 MARKS AND ROLLNUMBER > 12
+    // {
+        // const passStudents = results.filter((r,i) => r.marks >= 35)
+        //                             .filter((r,i) => r.rollNumber > 12)
+        // console.log(passStudents)
+
+        // // or 
+        
+        // const passStudents = results.filter((r,i) => r.marks >= 35 && r.rollNumber > 12)
     // }
 
 // QUESTION : CALCULATE CUMULATIVE MARKS PERCENTAGE IN THE RESULTS THAT IS (SUM(ALLMARKS) / SUM(TOTAL MARKS * NUMBER OF STUDENTS)) *100
